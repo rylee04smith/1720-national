@@ -1,0 +1,208 @@
+/****** COLOR ******/
+:root {
+    --color-primary: #cac426;
+    --color-secondary: #222223;
+    /* grey scale */
+    --color-greyscale-05: lab(98% 0 0);
+    --color-greyscale-10: lab(97% 0 0);
+    --color-greyscale-20: lab(91% 0 0);
+    --color-greyscale-30: lab(85% 0 0);
+    --color-greyscale-40: lab(66% 0 0);
+    --color-greyscale-50: lab(48% 0 0);
+    --color-greyscale-60: lab(34% 0 0);
+    --color-greyscale-70: lab(27% 0 0);
+    --color-greyscale-80: lab(15% 0 0);
+    --color-greyscale-90: lab(8% 0 0);
+    --color-greyscale-95: lab(5% 0 0);
+
+
+}
+
+
+/****** BORDER BOX ******/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Google Sans";
+}
+
+/****** HEADER ******/
+header {
+    padding: 10px 0 10px 10px;
+    display: grid;
+    grid-template-columns: 24px auto 44px 44px;
+    align-items: end;
+    column-gap: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.5px;
+}
+
+header span {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+/****** Navigation ******/
+nav {
+    background-color: var(--color-primary);
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    text-decoration: none;
+    padding: .85rem 10px .85rem 10px;
+}
+
+nav a:hover {
+    background-color: #a39f1a;
+    color: var(--color-secondary);
+}
+
+nav.show {
+    display: block;
+}
+
+nav .active a {
+    color: #fffeec;
+}
+
+/****** HAMBURGER ******/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00d7";
+}
+
+/****** Main ******/
+h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    margin-left: 10px;
+}
+
+/****** park card layout ******/
+.allparks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 10px;
+    margin: 10px;
+}
+.allparks div {
+border: solid 1px var(--color-greyscale-10);
+border-radius: 10px;
+  overflow: hidden;
+}
+.allparks section {
+    position: relative;
+}
+.allparks img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.allparks h2 {
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(255,255,255,0.6);
+width: 100%;
+margin: 0;
+padding: 0.5rem 10px;
+font-weight: 500;
+font-size: 1.2rem;
+text-align: center;
+}
+.allparks p {
+font-weight: 200;
+color: var(--color-greyscale-70);
+margin: 0.5rem 10px;
+span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-greyscale-40);
+}
+}
+.allparks a {
+    display: block;
+    background-color: var(--color-primary);
+    margin: 0.5rem 10px;
+    padding: 0.8rem 0;
+    text-align: center;
+    color: #fffeec;
+    font-weight: 600;
+border-radius: 99px;
+&:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}}
+
+/****** SOCIAL ******/
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social img {
+    display: block;
+    width: 22px;
+    height: auto;
+}
+
+.social a {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffeec;
+}
+
+.social a:hover {
+    background-color: var(--color-greyscale-10);
+}
+
+
+/****** FOOTER ******/
+footer {
+    background-color: var(--color-primary);
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
